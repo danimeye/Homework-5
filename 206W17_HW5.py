@@ -69,7 +69,7 @@ try:
 except:
     CACHE_DICTION = {}
 
-def search_tweet():
+def search_phrase():
 	phrase = input("Enter a phrase to search on Twitter: ")
 	unique_identifier = "twitter_{}".format(phrase) # seestring formatting chapter
 	# see if that username+twitter is in the cache diction!
@@ -89,7 +89,7 @@ def search_tweet():
 	tweet_phrases = twitter_results["statuses"]
 	return tweet_phrases
 
-tweepy_result = search_tweet()
+tweepy_result = search_phrase()
 for tweet in tweepy_result[:3]:
 		print("TEXT: " + tweet["text"])
 		print("CREATED AT: " + tweet["created_at"])
