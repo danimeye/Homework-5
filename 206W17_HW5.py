@@ -73,7 +73,7 @@ def search_tweet():
 	phrase = input("Enter a phrase to search on Twitter: ")
 	unique_identifier = "twitter_{}".format(phrase) # seestring formatting chapter
 	# see if that username+twitter is in the cache diction!
-	if unique_identifier in CACHE_DICTION: # if it is...
+	if unique_identifier in CACHE_DICTION: 
 		print('using cached data for', phrase)
 		twitter_results = CACHE_DICTION[unique_identifier] # grab the data from the cache!
 	else:
